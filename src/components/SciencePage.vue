@@ -10,13 +10,11 @@
   </div>
 </template>
 <script>
-import { ScienceSources } from "../helpers/news-sources";
 import NewsBySource from "../widgets/NewsBySource";
 export default {
   name: "SciencePage",
   data() {
     return {
-      scienceSources: ScienceSources,
       msg: "Welcome to Science Page"
     };
   },

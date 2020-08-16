@@ -10,13 +10,11 @@
   </div>
 </template>
 <script>
-import { VideoSources } from "../helpers/news-sources";
 import NewsBySource from "../widgets/NewsBySource";
 export default {
   name: "VideoPage",
   data() {
     return {
-      videoSources: VideoSources,
       msg: "Welcome to Science Page"
     };
   },

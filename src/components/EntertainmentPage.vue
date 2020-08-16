@@ -10,13 +10,11 @@
   </div>
 </template>
 <script>
-import { EntertainmentSources } from "../helpers/news-sources";
 import NewsBySource from "../widgets/NewsBySource";
 export default {
   name: "EntertainmentPage",
   data() {
     return {
-      entertainmentSources: EntertainmentSources,
       msg: "Welcome to Entertainment Page"
     };
   },

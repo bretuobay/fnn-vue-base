@@ -82,7 +82,7 @@ export default {
   name: "SiteHeader",
   data() {
     return {
-      siteName: "Vue Mashable Clone"
+      siteName: "Vue - Fake News Network"
     };
   }
 };

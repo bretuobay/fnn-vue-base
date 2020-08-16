@@ -10,13 +10,11 @@
   </div>
 </template>
 <script>
-import { CultureSources } from "../helpers/news-sources";
 import NewsBySource from "../widgets/NewsBySource";
 export default {
   name: "CulturePage",
   data() {
     return {
-      cultureSources: CultureSources,
       msg: "Welcome to Culture Page"
     };
   },

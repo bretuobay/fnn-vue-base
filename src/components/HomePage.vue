@@ -14,7 +14,6 @@
   </div>
 </template>
 <script>
-import { MainSources } from "../helpers/news-sources";
 import NewsBySource from "../widgets/NewsBySource";
 import Weather from "../widgets/Weather";
 import CurrencyRates from "../widgets/CurrencyRates";
@@ -23,7 +22,6 @@ export default {
   name: "HomePage",
   data() {
     return {
-      mainSources: MainSources,
       msg: "Welcome to Home Page"
     };
   },
