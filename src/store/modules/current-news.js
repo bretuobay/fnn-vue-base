@@ -16,8 +16,9 @@ const newsDataState = {
     business: [],
     culture: [],
     entertainment: [],
+    technology: [],
     science: [],
-    technology: []
+    video: []
   },
   newsError: {}
 };

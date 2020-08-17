@@ -3,7 +3,7 @@
     <div class="row">
       <main class="posts-listing col-lg-8">
         <div class="container">
-          <news-by-source v-bind:source="technology"></news-by-source>
+          <news-by-source v-bind:source="'technology'"></news-by-source>
         </div>
       </main>
     </div>
