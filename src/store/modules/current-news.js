@@ -26,9 +26,7 @@ const newsDataState = {
 const actions = {
   async getNewsByCategory({ commit }, payload) {
     try {
-      const response = await fetch(
-        appConstant.NEWS_API_URL_ENDPOINT + `${payload}`
-      );
+      const response = await fetch(appConstant.NEWS_API_URL_ENDPOINT + payload);
 
       if (!response.ok) {
         throw Error(response.statusText);
