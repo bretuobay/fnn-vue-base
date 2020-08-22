@@ -3,7 +3,7 @@
     <div class="row">
       <main class="posts-listing col-lg-8">
         <div class="container">
-          <news-by-source v-bind:source="'culture'"></news-by-source>
+          <news-by-source v-bind:category="'culture'"></news-by-source>
         </div>
       </main>
     </div>
@@ -15,12 +15,12 @@ export default {
   name: "CulturePage",
   data() {
     return {
-      msg: "Welcome to Culture Page"
+      msg: "Welcome to Culture Page",
     };
   },
   components: {
-    "news-by-source": NewsBySource
-  }
+    "news-by-source": NewsBySource,
+  },
 };
 </script>
 

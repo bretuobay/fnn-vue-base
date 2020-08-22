@@ -1,19 +1,13 @@
 <template>
   <div class="row">
-    <div
-      v-bind:key="article.title"
-      v-for="article in newsArticles"
-      class="post col-xl-6"
-    >
+    <div v-bind:key="article.title" v-for="article in newsArticles" class="post col-xl-6">
       <div class="post-thumbnail">
         <a :href="article.url" class="animsition-link">
           <img :src="article.urlToImage" alt="..." class="img-fluid" />
         </a>
       </div>
       <div class="post-details">
-        <div class="date meta-last">
-          {{ formatDate(article.publishedAt) }}
-        </div>
+        <div class="date meta-last">{{ formatDate(article.publishedAt) }}</div>
       </div>
       <a :href="article.url" class="animsition-link">
         <h3 class="h4 w-100">{{ article.title }}</h3>
@@ -34,26 +28,26 @@ import { getFormattedDateTime } from "../helpers/date-helper";
 
 export default {
   name: "NewsBySource",
-  props: ["source"],
+  props: ["category"],
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
     };
   },
   created() {
-    this.getNewsBySource(this.$props.source);
+    this.getNewsByCategory(this.$props.category);
   },
   computed: {
     ...mapState({
-      newsArticles: function({ currentNews }) {
-        return currentNews.newsArticles[this.$props.source];
-      }
-    })
+      newsArticles: function ({ currentNews }) {
+        return currentNews.newsArticles[this.$props.category];
+      },
+    }),
   },
   methods: {
-    ...mapActions(["getNewsBySource"]),
-    formatDate: getFormattedDateTime
-  }
+    ...mapActions(["getNewsByCategory"]),
+    formatDate: getFormattedDateTime,
+  },
 };
 </script>
 

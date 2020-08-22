@@ -24,10 +24,10 @@ const newsDataState = {
 };
 
 const actions = {
-  async getNewsBySource({ commit }, payload) {
+  async getNewsByCategory({ commit }, payload) {
     try {
       const response = await fetch(
-        appConstant.NEWS_API_URL_ENDPOINT + `channel/${payload}`
+        appConstant.NEWS_API_URL_ENDPOINT + `${payload}`
       );
 
       if (!response.ok) {
